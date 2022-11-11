@@ -1,6 +1,11 @@
  [] Hacer tests coverage
  [] Hacer tests
- [] Implementar lint
+ [X] Implementar lint
  [] Más configuración
- [] Diseñar fichero
+ [X] Diseñar fichero
+ [] Hacer/testear normalización
+ [] Testear data fetching
+ [] Tests E2E
+ [] Pensar en V2
+ 
  

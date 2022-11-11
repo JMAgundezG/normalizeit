@@ -1,15 +1,22 @@
-def _keys_s1_in_s2(s1: dict, s2: dict) -> bool:
-    for key, value in s1.items():
-        if type(value) is not dict:
-            if key not in s2.keys():
+"""
+JSON Utils
+"""
+
+
+def _keys_dict_1_in_dict_2(dict_1: dict, dict_2: dict) -> bool:
+    """Check if the keys from dict_1 are in dict_2"""
+    for key, value in dict_1.items():
+        if not isinstance(value, dict):
+            if key not in dict_2.keys():
                 return False
         else:
-            if type(s2[key]) is not dict:
+            if not isinstance(dict_2[key], dict):
                 return False
-            if not _keys_s1_in_s2(value, s2[key]):
+            if not _keys_dict_1_in_dict_2(value, dict_2[key]):
                 return False
     return True
 
-def same_keys(s1: dict, s2: dict) -> bool:
-    return _keys_s1_in_s2(s1, s2) and _keys_s1_in_s2(s2, s1)
 
+def same_keys(d_1: dict, d_2: dict) -> bool:
+    """Check if 2 dicts has the same keys"""
+    return _keys_dict_1_in_dict_2(d_1, d_2) and _keys_dict_1_in_dict_2(d_2, d_1)

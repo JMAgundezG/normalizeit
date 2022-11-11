@@ -1,11 +1,9 @@
 import json
 import typer
-from src.index import normalizeit
+
+def main(input_schema: str, output_schema: str, json_to_normalize: str, variable_identificator: Optional[str] = typer.Argument(None)):
+    normalizeit(input_schema, output_schema, json_to_normalize, variable_identificator)
 
 
-def main(input_schema: str,  output_schema: str):
-    normalizeit()
-    
-if __name__ ==  "__main__":
+if __name__ == "__main__":
     typer.run(main)
-

@@ -1,9 +1,26 @@
+""" This is something that I should resolve """
+
+
+from src.config.config import ConfigSingleton
+
+
 class NormalizationStrategy:
-    def __init__(self, config):
-        self.config = config
+    """
+    First defined normalization strategy.
+    """
 
-    def fetch_data(input_scheme: dict, dict_to_normalize: dict) -> dict:
-        pass
+    def __init__(self):
+        """Constructor"""
+        self.config = ConfigSingleton()
 
-    def normalize_func(input_scheme: dict, output_scheme: dict, dict_to_normalize: dict) -> dict:
-        pass
+    def fetch_data(self, input_scheme: dict, dict_to_fetch: dict) -> dict:
+        """
+        Method that fetches the data from a dict using the variables name of input_scheme
+        """
+
+    def normalize_func(
+        self, input_scheme: dict, output_scheme: dict, dict_to_normalize: dict
+    ) -> dict:
+        """
+        Method that normalizes a dict using with the format of output_scheme
+        """
