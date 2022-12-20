@@ -1,8 +1,8 @@
 """
     Created by @JMAgundezG 5/11/2022
 """
-from typing import Optional
 import json
+from typing import Optional
 
 
 class SingletonMeta(type):
@@ -34,13 +34,15 @@ class ConfigSingleton(metaclass=SingletonMeta):
         input_scheme_path: str = "./input_scheme.json",
         output_scheme_path: str = "./output_scheme.json",
         value_id_str: str = "$$",
+        input_scheme: Optional[dict] = None,
+        output_scheme: Optional[dict] = None,
     ):
         self.input_scheme_path = input_scheme_path
         self.output_scheme_path = output_scheme_path
-        self.input_scheme: dict = self.load_scheme_file(
+        self.input_scheme: dict = input_scheme or self.load_scheme_file(
             input_scheme_path, "input scheme file"
         )
-        self.output_scheme: dict = self.load_scheme_file(
+        self.output_scheme: dict = output_scheme or self.load_scheme_file(
             output_scheme_path, "output scheme file"
         )
 

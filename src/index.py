@@ -3,7 +3,9 @@ Created by @JMAgundezG 11/11/2022
 Main file os normalizeIt project"""
 
 from typing import Optional
+
 from src.config.config import ConfigSingleton
+from src.normalization_strategies.main_normalization_strategy import MainNormalizationStrategy
 
 
 class NormalizeIt:
@@ -25,10 +27,10 @@ class NormalizeIt:
 
     def normalize(self, dict_to_normalize: dict) -> dict:
         """
-            Normalize the dict passed using the configuration already loaded
+        Normalize the dict passed using the configuration already loaded
         """
-        return dict_to_normalize
+        return MainNormalizationStrategy().normalize(dict_to_normalize)
 
     def validate(self, dict_to_validate: dict) -> bool:
-        """ Validate dict using configuration """
-        return dict_to_validate
+        """Validate dict using configuration"""
+        return MainNormalizationStrategy().validate_dict_to_normalize(dict_to_validate)
