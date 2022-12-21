@@ -1,9 +1,5 @@
 """ This is something that I should resolve """
 
-
-from src.config.config import ConfigSingleton
-
-
 class NormalizationStrategy:
     """
     First defined normalization strategy.
@@ -11,7 +7,6 @@ class NormalizationStrategy:
 
     def __init__(self):
         """Constructor"""
-        self.config = ConfigSingleton()
 
     def fetch_data(self, dict_to_fetch: dict) -> dict:
         """

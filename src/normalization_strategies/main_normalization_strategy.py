@@ -5,8 +5,9 @@ from copy import deepcopy
 from src.fetch_strategies.main_fetch_strategy import MainFetchStrategy
 from src.output_strategies.main_output_strategy import MainOutputStrategy
 
-from ..utils.json_utils import same_keys
 from .normalization_strategy import NormalizationStrategy
+
+from src.config.config import ConfigSingleton
 
 
 class MainNormalizationStrategy(NormalizationStrategy):
@@ -14,9 +15,10 @@ class MainNormalizationStrategy(NormalizationStrategy):
     First defined normalization strategy.
     """
 
-    def __init__(self):
+    def __init__(self, config: ConfigSingleton):
         """Constructor"""
         super().__init__()
+        self.config = config
         self.fetch_strategy = MainFetchStrategy()
         self.output_strategy = MainOutputStrategy()
 
