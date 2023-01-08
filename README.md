@@ -13,3 +13,4 @@ Normalizeit is a simple tool to normalize your data given an input schema and an
         pip3 install -r requirements.txt
         
         
+Actual version: 0.1
