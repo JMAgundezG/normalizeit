@@ -3,13 +3,14 @@
 Normalizeit is a simple tool to normalize your data given an input schema and an output schema.
 
 ## Example
-    ```bash
+    
      python3 normalizeit.py normalize '{"helloworld" : "helloworld"}' --input-scheme='{"helloworld" : "%%key"}' --output-scheme='{"helloworld" : "%%key"}' --value-id-str="%%"
-     ```
+     
 
 ## Installation
     
-        ```bash
-        pip3 install -r requirements.txt
-        ```
         
+        pip3 install -r requirements.txt
+        
+        
+Actual version: 0.1
