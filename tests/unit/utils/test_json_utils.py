@@ -1,6 +1,7 @@
+"""Test json_utils.py."""
 import pytest
 
-from src.utils.json_utils import same_keys
+from src.utils.dict_utils import same_keys
 
 
 @pytest.mark.parametrize(
@@ -22,4 +23,7 @@ from src.utils.json_utils import same_keys
     ],
 )
 def test_same_keys(first_dict: dict, second_dict: dict, has_same_keys: bool):
+    """
+    Test same_keys method.
+    """
     assert same_keys(first_dict, second_dict) == has_same_keys

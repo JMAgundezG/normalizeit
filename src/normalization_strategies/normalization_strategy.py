@@ -1,5 +1,6 @@
 """ This is something that I should resolve """
 
+
 class NormalizationStrategy:
     """
     First defined normalization strategy.
@@ -18,7 +19,5 @@ class NormalizationStrategy:
         Method that normalizes a dict using with the format of output_scheme
         """
 
-    def validate_dict_to_normalize(
-        self, dict_to_normalize: dict
-    ) -> bool:
+    def validate_dict_to_normalize(self, dict_to_normalize: dict) -> bool:
         """This needs a lot more of validation"""

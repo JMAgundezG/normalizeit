@@ -1,3 +1,8 @@
+"""
+Created by @JMAgundezG 5/11/2022
+"""
+
+
 class FetchStrategy:
     """
     Definition of the fetching data strategy.

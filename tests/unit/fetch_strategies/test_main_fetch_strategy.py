@@ -1,5 +1,5 @@
 """
-Test main output strategy. 
+Test main output strategy.
 """
 
 import pytest
